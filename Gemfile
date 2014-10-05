@@ -29,6 +29,22 @@ gem 'spring',        group: :development
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+
+group :test do
+  gem 'coveralls', require: false
+end
+
+group :development, :test do
+  gem 'valid_attribute'
+  gem 'shoulda'
+  gem 'pry-rails'
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'factory_girl_rails'
+  gem 'factory_girl'
+ end
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
