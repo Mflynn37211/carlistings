@@ -12,9 +12,7 @@ class CarsController < ApplicationController
   end
 
   def create
-    params = car_params
-    params[:manufacturer] = Manufacturer.find(car_params[:manufacturer])
-    @car = Car.new(params)
+    @car = Car.new(car_params)
     if @car.save
       redirect_to cars_path
     else
@@ -26,6 +24,6 @@ class CarsController < ApplicationController
   private
 
   def car_params
-    params.require(:car).permit(:manufacturer, :model_name, :color, :year, :mileage, :description)
+    params.require(:car).permit(:manufacturer_id, :model_name, :color, :year, :mileage, :description)
   end
 end

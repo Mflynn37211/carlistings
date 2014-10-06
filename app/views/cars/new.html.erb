@@ -7,8 +7,8 @@
     </ul>
   <% end %>
 
-  <%= f.label :manufacturer%>:
-    <%= f.collection_select(:manufacturer, Manufacturer.all, :id, :name) %>
+  <%= f.label :manufacturer_id %>:
+    <%= f.collection_select(:manufacturer_id, Manufacturer.all, :id, :name) %>
     <br>
   <%= f.label :model_name %>:
     <%= f.text_field :model_name %>
