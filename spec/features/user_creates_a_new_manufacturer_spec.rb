@@ -17,6 +17,6 @@ feature 'user adds a new manufacturer' do
     visit new_manufacturer_path
 
     click_on 'Add Manufacturer'
-    expect(page).to have_content "We couldn\'t save your manufacturer, please insert information in both fields!"
+    expect(page).to have_content "Please insert information in both fields!"
   end
 end

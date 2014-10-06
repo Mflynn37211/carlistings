@@ -1,0 +1,29 @@
+<%= form_for Car.new do |f| %>
+  <% if @car.errors.any? %>
+    <ul>
+    <% @car.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  <% end %>
+
+  <%= f.label :manufacturer%>:
+    <%= f.collection_select(:manufacturer, Manufacturer.all, :id, :name) %>
+    <br>
+  <%= f.label :model_name %>:
+    <%= f.text_field :model_name %>
+    <br>
+  <%= f.label :year %>:
+    <%= f.text_field :year %>
+    <br>
+  <%= f.label :mileage %>:
+    <%= f.text_field :mileage %>
+    <br>
+  <%= f.label :color %>:
+    <%= f.text_field :color %>
+    <br>
+  <%= f.label :description %>:
+    <%= f.text_area :description %>
+    <br>
+  <%= f.submit 'Submit' %>
+<% end %>
