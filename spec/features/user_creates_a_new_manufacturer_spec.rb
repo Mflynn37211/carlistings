@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 feature 'user adds a new manufacturer' do
-
   scenario 'user can add a manufacturer' do
     manufacturer = FactoryGirl.build(:manufacturer)
 
